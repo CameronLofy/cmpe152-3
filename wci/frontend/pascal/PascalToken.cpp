@@ -27,16 +27,17 @@ void PascalToken::initialize()
 
     vector<string> rw_strings =
     {
-        "AND", "ARRAY", "BEGIN", "CASE", "CONST", "DIV", "DO", "DOWNTO",
+        "AND", "AGAIN", "ARRAY", "BEGIN", "CASE", "CONST", "DIV", "DO", "DOWNTO",
         "ELSE", "END", "FILE", "FOR", "FUNCTION", "GOTO", "IF", "IN",
-        "LABEL", "MOD", "NIL", "NOT", "OF", "OR", "PACKED", "PROCEDURE",
+        "LABEL", "LOOP", "MOD", "NIL", "NOT", "OF", "OR", "PACKED", "PROCEDURE",
         "PROGRAM", "RECORD", "REPEAT", "SET", "THEN", "TO", "TYPE",
-        "UNTIL", "VAR", "WHILE", "WITH"
+        "UNTIL", "VAR", "WHEN", "WHILE", "WITH"
     };
 
     vector<PascalTokenType> rw_keys =
     {
         PascalTokenType::AND,
+        PascalTokenType::AGAIN,
         PascalTokenType::ARRAY,
         PascalTokenType::BEGIN,
         PascalTokenType::CASE,
@@ -55,6 +56,7 @@ void PascalToken::initialize()
         PascalTokenType::IN,
 
         PascalTokenType::LABEL,
+        PascalTokenType::LOOP,
         PascalTokenType::MOD,
         PascalTokenType::NIL,
         PascalTokenType::NOT,
@@ -73,6 +75,7 @@ void PascalToken::initialize()
 
         PascalTokenType::UNTIL,
         PascalTokenType::VAR,
+        PascalTokenType::WHEN,
         PascalTokenType::WHILE,
         PascalTokenType::WITH
     };
@@ -85,7 +88,7 @@ void PascalToken::initialize()
     vector<string> ss_strings =
     {
         "+", "-", "*", "/", ":=", ".", ",", ";", ":", "'", "=", "<>",
-        "<", "<=", ">=", ">", "(", ")", "[", "]", "{", "}",  "^", ".."
+        "<", "<=", ">=", ">", "==>", "(", ")", "[", "]", "{", "}",  "^", ".."
     };
 
     vector<PascalTokenType> ss_keys =
@@ -107,6 +110,7 @@ void PascalToken::initialize()
         PascalTokenType::LESS_EQUALS,
         PascalTokenType::GREATER_EQUALS,
         PascalTokenType::GREATER_THAN,
+        PascalTokenType::ARROW,
         PascalTokenType::LEFT_PAREN,
         PascalTokenType::RIGHT_PAREN,
         PascalTokenType::LEFT_BRACKET,
@@ -127,7 +131,7 @@ void PascalToken::initialize()
         "PLUS", "MINUS", "STAR", "SLASH", "COLON_EQUALS", "DOT", "COMMA",
         "SEMICOLON", "COLON", "QUOTE", "EQUALS", "NOT_EQUALS",
 
-        "LESS_THAN", "LESS_EQUALS", "GREATER_EQUALS", "GREATER_THAN",
+        "LESS_THAN", "LESS_EQUALS", "GREATER_EQUALS", "GREATER_THAN", "ARROW",
         "LEFT_PAREN", "RIGHT_PAREN", "LEFT_BRACKET", "RIGHT_BRACKET",
         "LEFT_BRACE", "RIGHT_BRACE", "UP_ARROW", "DOT_DOT"
     };

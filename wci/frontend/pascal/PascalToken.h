@@ -26,16 +26,16 @@ using namespace wci::frontend;
 enum class PascalTokenType
 {
     // Reserved words.
-    AND, ARRAY, BEGIN, CASE, CONST, DIV, DO, DOWNTO, ELSE, END,
-    FILE, FOR, FUNCTION, GOTO, IF, IN, LABEL, MOD, NIL, NOT,
+    AND, AGAIN, ARRAY, BEGIN, CASE, CONST, DIV, DO, DOWNTO, ELSE, END,
+    FILE, FOR, FUNCTION, GOTO, IF, IN, LABEL, LOOP, MOD, NIL, NOT,
     OF, OR, PACKED, PROCEDURE, PROGRAM, RECORD, REPEAT, SET,
-    THEN, TO, TYPE, UNTIL, VAR, WHILE, WITH,
+    THEN, TO, TYPE, UNTIL, VAR, WHEN, WHILE, WITH,
 
     // Special symbols.
     PLUS, MINUS, STAR, SLASH, COLON_EQUALS,
     DOT, COMMA, SEMICOLON, COLON, QUOTE,
     EQUALS, NOT_EQUALS, LESS_THAN, LESS_EQUALS,
-    GREATER_EQUALS, GREATER_THAN, LEFT_PAREN, RIGHT_PAREN,
+    GREATER_EQUALS, GREATER_THAN, ARROW, LEFT_PAREN, RIGHT_PAREN,
     LEFT_BRACKET, RIGHT_BRACKET, LEFT_BRACE, RIGHT_BRACE,
     UP_ARROW, DOT_DOT,
 
@@ -44,6 +44,7 @@ enum class PascalTokenType
 };
 
 constexpr PascalTokenType PT_AND = PascalTokenType::AND;
+constexpr PascalTokenType PT_AGAIN = PascalTokenType::AGAIN;
 constexpr PascalTokenType PT_ARRAY = PascalTokenType::ARRAY;
 constexpr PascalTokenType PT_BEGIN = PascalTokenType::BEGIN;
 constexpr PascalTokenType PT_CASE = PascalTokenType::CASE;
@@ -62,6 +63,7 @@ constexpr PascalTokenType PT_IF = PascalTokenType::IF;
 constexpr PascalTokenType PT_IN = PascalTokenType::IN;
 
 constexpr PascalTokenType PT_LABEL = PascalTokenType::LABEL;
+constexpr PascalTokenType PT_LOOP = PascalTokenType::LOOP;
 constexpr PascalTokenType PT_MOD = PascalTokenType::MOD;
 constexpr PascalTokenType PT_NIL = PascalTokenType::NIL;
 constexpr PascalTokenType PT_NOT = PascalTokenType::NOT;
@@ -80,6 +82,7 @@ constexpr PascalTokenType PT_TYPE = PascalTokenType::TYPE;
 
 constexpr PascalTokenType PT_UNTIL = PascalTokenType::UNTIL;
 constexpr PascalTokenType PT_VAR = PascalTokenType::VAR;
+constexpr PascalTokenType PT_WHEN = PascalTokenType::WHEN;
 constexpr PascalTokenType PT_WHILE = PascalTokenType::WHILE;
 constexpr PascalTokenType PT_WITH = PascalTokenType::WITH;
 
@@ -100,6 +103,7 @@ constexpr PascalTokenType PT_LESS_THAN = PascalTokenType::LESS_THAN;
 constexpr PascalTokenType PT_LESS_EQUALS = PascalTokenType::LESS_EQUALS;
 constexpr PascalTokenType PT_GREATER_EQUALS = PascalTokenType::GREATER_EQUALS;
 constexpr PascalTokenType PT_GREATER_THAN = PascalTokenType::GREATER_THAN;
+constexpr PascalTokenType PT_ARROW = PascalTokenType::ARROW;
 constexpr PascalTokenType PT_LEFT_PAREN = PascalTokenType::LEFT_PAREN;
 constexpr PascalTokenType PT_RIGHT_PAREN = PascalTokenType::RIGHT_PAREN;
 constexpr PascalTokenType PT_LEFT_BRACKET = PascalTokenType::LEFT_BRACKET;
